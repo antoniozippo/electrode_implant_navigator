@@ -1,0 +1,86 @@
+{
+    "atlas_name": "allen_mouse_25um",
+
+    "render_settings": {
+        "show_axes": false,
+        "whole_screen": false,
+        "shader_style": "plastic",
+        "zoom": 1.4
+    },
+
+    "brain_regions": [
+        {"name": "ILA", "color": "darkgreen", "alpha": 0.5},
+        {"name": "CA",  "color": "salmon",    "alpha": 0.5},
+        {"name": "DG",  "color": "salmon",    "alpha": 0.5},
+        {"name": "CP",  "color": "skyblue",   "alpha": 0.5},
+        {"name": "PL",  "color": "gold",      "alpha": 0.5},
+        {"name": "BLA", "color": "purple",    "alpha": 0.5}
+    ],
+
+    "electrodes": [
+        {
+            "name": "shank1",
+            "tip": [7200, 1200, 8100],
+            "direction": [0.0153, 0.9999, 0.0],
+            "depth": 4900.57,
+            "color": "black",
+            "linewidth": 10
+        },
+        {
+            "name": "shank2",
+            "tip": [7000, 1200, 8400],
+            "direction": [0.0153, 0.9999, 0.0],
+            "depth": 4900.57,
+            "color": "black",
+            "linewidth": 10
+        },
+        {
+            "name": "shank3",
+            "tip": [6800, 1200, 8700],
+            "direction": [0.0153, 0.9999, 0.0],
+            "depth": 4900.57,
+            "color": "black",
+            "linewidth": 10
+        },
+        {
+            "name": "shank4",
+            "tip": [6600, 1200, 9000],
+            "direction": [0.0153, 0.9999, 0.0],
+            "depth": 4900.57,
+            "color": "black",
+            "linewidth": 10
+        },
+        {
+            "name": "shank5",
+            "tip": [3200, 1200, 5300],
+            "direction": [0.0812, 0.9948, -0.0609],
+            "depth": 4925.44,
+            "color": "black",
+            "linewidth": 10
+        },
+        {
+            "name": "shank6",
+            "tip": [3500, 1200, 5000],
+            "direction": [0.0812, 0.9948, -0.0609],
+            "depth": 4925.44,
+            "color": "black",
+            "linewidth": 10
+        },
+        {
+            "name": "shank7",
+            "tip": [3800, 1200, 4700],
+            "direction": [0.0812, 0.9948, -0.0609],
+            "depth": 4925.44,
+            "color": "black",
+            "linewidth": 10
+        },
+        {
+            "name": "shank8",
+            "tip": [4100, 1200, 4400],
+            "direction": [0.0812, 0.9948, -0.0609],
+            "depth": 4925.44,
+            "color": "black",
+            "linewidth": 10
+        }
+    ]
+}
