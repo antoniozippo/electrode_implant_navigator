@@ -1,0 +1,76 @@
+{
+    "atlas_name": "allen_mouse_25um",
+    "render_settings": {
+        "show_axes": false,
+        "whole_screen": false,
+        "shader_style": "plastic",
+        "zoom": 1.4
+    },
+    "brain_regions": [
+        {
+            "name": "DEC",
+            "color": "darkgreen",
+            "alpha": 0.5
+        },
+        {
+            "name": "MD",
+            "color": "skyblue",
+            "alpha": 0.5
+        },
+        {
+            "name": "PL",
+            "color": "purple",
+            "alpha": 0.5
+        }
+    ],
+    "electrodes": [
+        {
+            "name": "shank1",
+            "tip": [
+                3000.0,
+                1200.0,
+                6200.0
+            ],
+            "direction": [
+                0.0153,
+                0.9999,
+                0.0
+            ],
+            "depth": 3900.57,
+            "color": "black",
+            "linewidth": 10
+        },
+        {
+            "name": "shank2",
+            "tip": [
+                6800.0,
+                300.0,
+                6200.0
+            ],
+            "direction": [
+                0.0153,
+                0.9999,
+                0.0
+            ],
+            "depth": 4900.57,
+            "color": "black",
+            "linewidth": 10
+        },
+        {
+            "name": "shank3",
+            "tip": [
+                12100.0,
+                800.0,
+                6200.0
+            ],
+            "direction": [
+                0.0153,
+                0.9999,
+                0.0
+            ],
+            "depth": 4900.57,
+            "color": "black",
+            "linewidth": 10
+        }
+    ]
+}

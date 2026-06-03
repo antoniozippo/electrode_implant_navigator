@@ -1,0 +1,59 @@
+{
+    "atlas_name": "allen_mouse_25um",
+    "render_settings": {
+        "show_axes": false,
+        "whole_screen": false,
+        "shader_style": "plastic",
+        "zoom": 1.4
+    },
+    "brain_regions": [
+        {
+            "name": "ILA",
+            "color": "darkgreen",
+            "alpha": 0.5
+        },
+        {
+            "name": "CA",
+            "color": "salmon",
+            "alpha": 0.5
+        },
+        {
+            "name": "DG",
+            "color": "salmon",
+            "alpha": 0.5
+        },
+        {
+            "name": "CP",
+            "color": "skyblue",
+            "alpha": 0.5
+        },
+        {
+            "name": "PL",
+            "color": "gold",
+            "alpha": 0.5
+        },
+        {
+            "name": "BLA",
+            "color": "purple",
+            "alpha": 0.5
+        }
+    ],
+    "electrodes": [
+        {
+            "name": "shank1",
+            "tip": [
+                7200.0,
+                1200.0,
+                8100.0
+            ],
+            "direction": [
+                0.0153,
+                0.9999,
+                0.0
+            ],
+            "depth": 4900.57,
+            "color": "black",
+            "linewidth": 10
+        }
+    ]
+}

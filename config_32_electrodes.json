@@ -1,0 +1,560 @@
+{
+  "atlas_name": "allen_mouse_25um",
+  "render_settings": {
+    "show_axes": false,
+    "whole_screen": false,
+    "shader_style": "plastic",
+    "zoom": 1.4
+  },
+  "brain_regions": [
+    {
+      "name": "ILA",
+      "color": "darkgreen",
+      "alpha": 0.3
+    },
+    {
+      "name": "CA",
+      "color": "salmon",
+      "alpha": 0.3
+    },
+    {
+      "name": "DG",
+      "color": "salmon",
+      "alpha": 0.3
+    },
+    {
+      "name": "ACB",
+      "color": "skyblue",
+      "alpha": 0.3
+    },
+    {
+      "name": "PL",
+      "color": "gold",
+      "alpha": 0.3
+    },
+    {
+      "name": "VTA",
+      "color": "purple",
+      "alpha": 0.3
+    },
+    {
+      "name": "BLA",
+      "color": "gray",
+      "alpha": 0.3
+    }
+  ],
+  "electrodes": [
+    {
+      "name": "shank1",
+      "tip": [
+        3473.1,
+        400.0,
+        5335.6
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 3754.22,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank2",
+      "tip": [
+        3403.6,
+        400.0,
+        5583.3
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 3801.3,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank3",
+      "tip": [
+        3606.2,
+        400.0,
+        5342.2
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 3582.13,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank4",
+      "tip": [
+        3403.8,
+        400.0,
+        5779.6
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 3797.21,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank5",
+      "tip": [
+        3149.0,
+        400.0,
+        5779.3
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 3045.63,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank6",
+      "tip": [
+        7589.5,
+        400.0,
+        4105.2
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2595.49,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank7",
+      "tip": [
+        6644.2,
+        400.0,
+        5494.9
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2360.8,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank8",
+      "tip": [
+        7957.7,
+        400.0,
+        7580.7
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2360.16,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank9",
+      "tip": [
+        6575.9,
+        400.0,
+        5292.7
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2341.95,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank10",
+      "tip": [
+        7822.0,
+        400.0,
+        4355.9
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2077.35,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank11",
+      "tip": [
+        8343.2,
+        400.0,
+        4030.4
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 4534.51,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank12",
+      "tip": [
+        8306.0,
+        400.0,
+        7396.1
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 4603.58,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank13",
+      "tip": [
+        8822.6,
+        400.0,
+        7589.6
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 3660.4,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank14",
+      "tip": [
+        7539.7,
+        400.0,
+        6104.5
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2605.48,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank15",
+      "tip": [
+        7987.3,
+        400.0,
+        6752.3
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2454.5,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank16",
+      "tip": [
+        4535.2,
+        400.0,
+        4856.2
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 5138.36,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank17",
+      "tip": [
+        4326.0,
+        400.0,
+        6553.8
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 4989.79,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank18",
+      "tip": [
+        4073.5,
+        400.0,
+        6242.8
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 5834.58,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank19",
+      "tip": [
+        4639.9,
+        400.0,
+        4555.7
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 5797.82,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank20",
+      "tip": [
+        4615.7,
+        400.0,
+        7362.7
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 5597.03,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank21",
+      "tip": [
+        3544.8,
+        400.0,
+        5673.5
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2372.82,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank22",
+      "tip": [
+        2964.9,
+        400.0,
+        6285.3
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2208.48,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank23",
+      "tip": [
+        2998.3,
+        400.0,
+        5681.3
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2634.07,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank24",
+      "tip": [
+        2867.3,
+        400.0,
+        6189.7
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 2121.49,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank25",
+      "tip": [
+        8548.7,
+        400.0,
+        5129.3
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 4485.87,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank26",
+      "tip": [
+        8545.1,
+        400.0,
+        5225.2
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 4715.35,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank27",
+      "tip": [
+        8073.7,
+        400.0,
+        4905.7
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 4832.83,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank28",
+      "tip": [
+        8375.1,
+        400.0,
+        5141.6
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 4570.02,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank29",
+      "tip": [
+        7028.9,
+        400.0,
+        3204.5
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 5418.86,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank30",
+      "tip": [
+        7267.7,
+        400.0,
+        3321.5
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 6253.44,
+      "color": "darkred",
+      "linewidth": 3
+    },
+    {
+      "name": "shank31",
+      "tip": [
+        6596.5,
+        400.0,
+        7999.1
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 5320.42,
+      "color": "black",
+      "linewidth": 3
+    },
+    {
+      "name": "shank32",
+      "tip": [
+        6917.9,
+        400.0,
+        7925.0
+      ],
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "depth": 6235.37,
+      "color": "darkred",
+      "linewidth": 3
+    }
+  ]
+}

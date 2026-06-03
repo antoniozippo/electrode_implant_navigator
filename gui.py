@@ -227,6 +227,16 @@ class NavigatorApp:
         ttk.Spinbox(top, from_=0.5, to=5.0, increment=0.1,
                      textvariable=self.zoom_var, width=5).grid(row=0, column=6)
 
+        # --- Auto-placement controls (row 1) ---
+        sep = ttk.Separator(top, orient="horizontal")
+        sep.grid(row=1, column=0, columnspan=8, sticky="ew", pady=3)
+        ttk.Label(top, text="Auto N:").grid(row=2, column=0, sticky="w")
+        self.auto_n_var = tk.IntVar(value=32)
+        ttk.Spinbox(top, from_=1, to=128, textvariable=self.auto_n_var,
+                     width=5).grid(row=2, column=1, padx=(0, 8))
+        ttk.Button(top, text="Auto Place Electrodes",
+                   command=self._auto_place).grid(row=2, column=2, columnspan=6, sticky="w")
+
         # --- Brain regions ---
         reg_frame = ttk.LabelFrame(self.root, text="Brain Regions", padding=6)
         reg_frame.pack(fill="x", padx=8, pady=4)
@@ -266,6 +276,93 @@ class NavigatorApp:
             self._add_region(r)
         for e in DEFAULT_ELECTRODES:
             self._add_electrode(e)
+
+    # --- Auto Placement ---
+
+    def _auto_place(self):
+        """Auto-generate electrodes distributed across all brain regions."""
+        regions = [r.to_dict() for r in self.region_rows if r.name_var.get().strip()]
+        if not regions:
+            messagebox.showwarning("No Regions",
+                                   "Add at least one brain region first.")
+            return
+
+        n_total = self.auto_n_var.get()
+        if n_total < 1:
+            return
+
+        import numpy as np
+        try:
+            from brainrender import Scene
+        except ImportError:
+            messagebox.showerror("Error",
+                                 "brainrender is not installed.\n"
+                                 "Run: pip install brainrender")
+            return
+
+        atlas_name = self.atlas_var.get()
+
+        # Clear existing electrodes
+        for row in self.electrode_rows:
+            row.destroy()
+        self.electrode_rows.clear()
+
+        # Show a "loading" cursor while atlas loads
+        self.root.config(cursor="watch")
+        self.root.update()
+        try:
+            scene = Scene(atlas_name=atlas_name, inset=False)
+        except Exception as exc:
+            self.root.config(cursor="")
+            messagebox.showerror("Atlas Error",
+                                 f"Could not load atlas \"{atlas_name}\":\n{exc}")
+            return
+
+        region_names = [r["name"] for r in regions]
+        n_regions = len(region_names)
+
+        # Evenly distribute electrodes
+        counts = [n_total // n_regions] * n_regions
+        for i in range(n_total % n_regions):
+            counts[i] += 1
+
+        np.random.seed(42)
+        dv_entry = 400.0
+
+        for r_name, n in zip(region_names, counts):
+            actor = scene.add_brain_region(r_name, alpha=0.3)
+            verts = actor.mesh.points
+            centroid = verts.mean(axis=0)
+
+            if n <= len(verts):
+                indices = np.random.choice(len(verts), n, replace=False)
+                targets = verts[indices]
+            else:
+                targets = verts[np.random.choice(len(verts), n, replace=True)]
+
+            # Bias toward centroid for tighter clustering
+            targets = 0.7 * targets + 0.3 * centroid
+
+            for tgt in targets:
+                entry = [float(tgt[0]), dv_entry, float(tgt[2])]
+                vec = tgt - np.array(entry)
+                dist = float(np.linalg.norm(vec))
+                direction = (vec / dist).tolist() if dist > 0 else [0, 1, 0]
+
+                data = {
+                    "name": "",
+                    "tip": [round(entry[0], 1), round(entry[1], 1), round(entry[2], 1)],
+                    "direction": [round(direction[0], 4), round(direction[1], 4), round(direction[2], 4)],
+                    "depth": round(dist, 2),
+                    "color": "black",
+                    "linewidth": 4,
+                }
+                self._add_electrode(data)
+
+        self.root.config(cursor="")
+        messagebox.showinfo("Auto Placement",
+                            f"Generated {n_total} electrodes across "
+                            f"{n_regions} region(s).")
 
     # --- Region management ---
 
